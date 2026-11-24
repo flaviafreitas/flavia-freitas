@@ -1,0 +1,70 @@
+.portfolio {
+	background: var(--color-canvas);
+	color: var(--color-cream);
+
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+
+	a:where(:not(.btn)) {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	button:where(:not(.btn)) {
+		font: inherit;
+		cursor: pointer;
+	}
+
+	a:where(:not(.btn)):hover,
+	button:where(:not(.btn)):hover {
+		text-decoration: underline;
+		text-underline-offset: 0.24em;
+	}
+
+	:focus-visible {
+		outline: 3px solid var(--color-focus);
+		outline-offset: 3px;
+	}
+
+	.wrap {
+		width: min(90%, 1296px);
+		margin-inline: auto;
+	}
+
+	.row,
+	.actions {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 16px;
+	}
+
+	.actions {
+		justify-content: flex-start;
+		flex-wrap: wrap;
+	}
+
+	h1,
+	h2,
+	h3,
+	p {
+		margin: 0;
+	}
+
+	h2 {
+		max-width: 21ch;
+	}
+
+	.label {
+		text-transform: uppercase;
+		color: var(--color-lime);
+		margin-bottom: 30px;
+	}
+
+	.section {
+		padding-block: clamp(58px, 7vw, 104px);
+	}
+}

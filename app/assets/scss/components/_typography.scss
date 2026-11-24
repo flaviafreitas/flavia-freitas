@@ -1,0 +1,57 @@
+.type-display,
+.type-h1,
+.type-h2,
+.type-h3 {
+	font-family: var(--font-display);
+	font-weight: 600;
+	letter-spacing: -0.025em;
+}
+
+.type-display {
+	font-size: var(--text-display);
+	line-height: var(--leading-tight);
+}
+
+.type-h1 {
+	font-size: var(--text-h1);
+	line-height: var(--leading-heading);
+}
+
+.type-h2 {
+	font-size: var(--text-h2);
+	line-height: var(--leading-heading);
+}
+
+.type-h3 {
+	font-size: var(--text-h3);
+	line-height: var(--leading-heading);
+	font-weight: 700;
+}
+
+.type-body,
+.type-body-lg,
+.type-small {
+	font-family: var(--font-body);
+	font-weight: 400;
+	line-height: var(--leading-body);
+}
+
+.type-body-lg {
+	font-size: var(--text-body-lg);
+}
+
+.type-body {
+	font-size: var(--text-body);
+}
+
+.type-small {
+	font-size: var(--text-small);
+}
+
+.type-label {
+	font-family: var(--font-mono);
+	font-size: var(--text-label);
+	font-weight: 700;
+	letter-spacing: 1.5px;
+	line-height: 1.4;
+}

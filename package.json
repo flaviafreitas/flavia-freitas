@@ -1,0 +1,39 @@
+{
+	"name": "flavia-freitas",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "nuxt dev --dotenv .env.local",
+		"build": "nuxt build --dotenv .env.local",
+		"generate": "nuxt generate --dotenv .env.local",
+		"preview": "nuxt preview --dotenv .env.local",
+		"start": "node .output/server/index.mjs",
+		"postinstall": "nuxt prepare",
+		"typecheck": "nuxt typecheck --dotenv .env.local",
+		"format": "prettier --write app sanity \"*.ts\" package.json tsconfig.json .prettierrc.json README.md",
+		"format:check": "prettier --check app sanity \"*.ts\" package.json tsconfig.json .prettierrc.json README.md"
+	},
+	"dependencies": {
+		"@portabletext/vue": "^2.0.0",
+		"@sanity/client": "^7.27.0",
+		"nuxt": "^4.6.3",
+		"react": "^19.3.0",
+		"react-dom": "^19.3.0",
+		"sanity": "^6.19.0",
+		"styled-components": "^6.1.19",
+		"swiper": "^14.4.0",
+		"vue": "^3.5.44",
+		"vue-router": "^5.4.0"
+	},
+	"devDependencies": {
+		"@portabletext/types": "^4.0.2",
+		"@types/node": "^24.10.0",
+		"@types/react": "^19.2.0",
+		"@types/react-dom": "^19.2.0",
+		"prettier": "3.9.10",
+		"sass": "^1.105.1",
+		"typescript": "^5.9.3",
+		"vue-tsc": "^3.3.13"
+	},
+	"type": "module"
+}
