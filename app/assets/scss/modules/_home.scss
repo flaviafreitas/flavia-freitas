@@ -1,0 +1,57 @@
+.portfolio {
+	.hero {
+		padding-block: clamp(30px, 4vw, 56px) clamp(48px, 5vw, 72px);
+	}
+
+	.hero-grid {
+		display: grid;
+		grid-template-columns: 1.7fr 1fr;
+		align-items: center;
+		gap: 4vw;
+		margin: 32px 0;
+	}
+
+	h1 em {
+		display: block;
+		max-width: 9ch;
+		font-style: normal;
+		color: var(--color-lime);
+	}
+
+	.interfaces {
+		width: min(100%, 420px);
+		height: auto;
+		justify-self: end;
+	}
+
+	.hero .label {
+		color: var(--color-cream);
+		display: flex;
+		gap: 10px;
+		align-items: center;
+	}
+
+	.intro {
+		color: var(--color-muted);
+	}
+
+	.intro {
+		max-width: 59ch;
+		margin-bottom: 24px;
+	}
+
+	@media (max-width: 720px) {
+		.hero-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.hero-grid {
+			gap: 24px;
+		}
+
+		.interfaces {
+			width: min(85%, 360px);
+			justify-self: center;
+		}
+	}
+}
