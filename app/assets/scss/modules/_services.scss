@@ -1,0 +1,52 @@
+.portfolio {
+	.services {
+		display: grid;
+		gap: 24px;
+	}
+
+	.band {
+		background: var(--color-panel);
+	}
+
+	.services {
+		margin-top: 40px;
+	}
+
+	.services {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+
+	.services article {
+		background: var(--color-lime);
+		color: var(--color-ink);
+		padding: clamp(20px, 2.3vw, 34px);
+		border-radius: 24px;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	.services article:nth-child(3n + 2) {
+		background: var(--color-coral);
+	}
+
+	.services article:nth-child(3n) {
+		background: #eae6d8;
+	}
+
+	.services h3 {
+		margin-top: 28px;
+	}
+
+	.services article > small {
+		margin-top: auto;
+		padding-top: 24px;
+		border-top: 1px solid #15251b44;
+	}
+
+	@media (max-width: 720px) {
+		.services {
+			grid-template-columns: 1fr;
+		}
+	}
+}
