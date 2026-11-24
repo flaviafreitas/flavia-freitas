@@ -1,0 +1,53 @@
+.portfolio {
+	.contact {
+		background: var(--color-lime);
+		color: var(--color-ink);
+		border-radius: 24px;
+		padding: clamp(24px, 4vw, 52px);
+	}
+
+	.contact .label {
+		color: var(--color-ink);
+	}
+
+	.contact h2 {
+		max-width: 17ch;
+	}
+
+	.contact p:not(.label) {
+		margin: 28px 0 12px;
+		max-width: 48ch;
+	}
+
+	.round {
+		background: var(--color-ink);
+		border-radius: 50%;
+		display: grid;
+		place-items: center;
+		width: clamp(50px, 7vw, 104px);
+		aspect-ratio: 1;
+		flex: none;
+	}
+
+	.email {
+		font-size: clamp(16px, 2vw, 28px);
+		font-weight: 700;
+		overflow-wrap: anywhere;
+	}
+
+	@media (max-width: 720px) {
+		.contact .row {
+			align-items: flex-end;
+		}
+	}
+
+	@media (max-width: 420px) {
+		.round {
+			width: 42px;
+		}
+
+		.round img {
+			width: 24px;
+		}
+	}
+}
