@@ -1,0 +1,64 @@
+.portfolio {
+	.poster b {
+		font-weight: 600;
+		line-height: 1.06;
+		letter-spacing: -0.052em;
+	}
+
+	.bio {
+		color: var(--color-muted);
+	}
+
+	.about {
+		display: grid;
+		gap: 24px;
+	}
+
+	.about {
+		grid-template-columns: 0.85fr 1fr;
+		align-items: center;
+		gap: clamp(24px, 6vw, 88px);
+	}
+
+	.poster {
+		background: var(--color-coral);
+		color: var(--color-ink);
+		border-radius: 24px;
+		padding: clamp(24px, 3vw, 42px);
+		display: grid;
+		align-content: space-between;
+		gap: 30px;
+		aspect-ratio: 1.08;
+	}
+
+	.poster small {
+		text-transform: uppercase;
+	}
+
+	.poster b {
+		white-space: pre-line;
+		font-size: clamp(38px, 4.5vw, 66px);
+		max-width: 10ch;
+	}
+
+	.bio {
+		white-space: pre-line;
+		margin-block: 24px;
+	}
+
+	.tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+	}
+
+	@media (max-width: 720px) {
+		.about {
+			grid-template-columns: 1fr;
+		}
+
+		.poster {
+			aspect-ratio: auto;
+		}
+	}
+}
