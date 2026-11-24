@@ -1,0 +1,49 @@
+.portfolio {
+	.strip .wrap {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 16px;
+	}
+
+	.strip {
+		background: var(--color-lime);
+		color: var(--color-ink);
+	}
+
+	.strip .wrap {
+		min-height: 92px;
+		gap: 24px;
+		flex-wrap: wrap;
+	}
+
+	.strip span {
+		display: flex;
+		align-items: center;
+		gap: clamp(16px, 5vw, 90px);
+		text-transform: uppercase;
+		font-weight: 800;
+	}
+
+	.strip span:last-child img {
+		display: none;
+	}
+
+	@media (max-width: 720px) {
+		.strip .wrap {
+			justify-content: center;
+			gap: 8px 16px;
+			padding-block: 16px;
+		}
+
+		.strip span {
+			font-size: 12px;
+			gap: 12px;
+		}
+
+		.strip img {
+			width: 16px;
+			height: 16px;
+		}
+	}
+}
