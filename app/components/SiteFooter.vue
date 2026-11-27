@@ -1,5 +1,4 @@
 <script setup lang="ts">
-	const imageUrl = useAssetUrl()
 	const { site } = useSiteContent()
 </script>
 
@@ -10,17 +9,11 @@
 			<div class="actions">
 				<a :href="site.linkedin">
 					LinkedIn
-					<img
-						:src="imageUrl('arrow-social.svg')"
-						alt=""
-					/>
+					<UiArrow direction="up-right" />
 				</a>
 				<a :href="site.github">
 					GitHub
-					<img
-						:src="imageUrl('arrow-social.svg')"
-						alt=""
-					/>
+					<UiArrow direction="up-right" />
 				</a>
 			</div>
 		</div>
