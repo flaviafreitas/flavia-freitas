@@ -1,49 +1,93 @@
 .portfolio {
-	.strip .wrap {
+	.strip {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
-		gap: 16px;
-	}
-
-	.strip {
 		background: var(--color-lime);
 		color: var(--color-ink);
 	}
 
-	.strip .wrap {
-		min-height: 92px;
-		gap: 24px;
-		flex-wrap: wrap;
+	.strip-track {
+		display: flex;
+		flex: 1;
+		min-width: 0;
+		overflow: hidden;
 	}
 
-	.strip span {
+	.strip-list {
+		display: flex;
+		flex: none;
+		align-items: center;
+		justify-content: space-around;
+		gap: clamp(24px, 5vw, 90px);
+		min-width: 100%;
+		min-height: 92px;
+		margin: 0;
+		padding: 0 clamp(16px, 4vw, 64px);
+		list-style: none;
+	}
+
+	.strip-list li {
 		display: flex;
 		align-items: center;
 		gap: clamp(16px, 5vw, 90px);
+		white-space: nowrap;
 		text-transform: uppercase;
 		font-weight: 800;
 	}
 
-	.strip span:last-child img {
-		display: none;
+	.strip-control {
+		flex: none;
+		width: 44px;
+		min-height: 44px;
+		margin-inline: 4px;
+		border: 0;
+		background: transparent;
+		color: inherit;
+		font: inherit;
+		cursor: pointer;
 	}
 
-	@media (max-width: 720px) {
-		.strip .wrap {
-			justify-content: center;
-			gap: 8px 16px;
+	@media (prefers-reduced-motion: no-preference) {
+		.strip-list {
+			animation: specialty-scroll 26s linear infinite;
+		}
+
+		.strip-track.is-paused .strip-list {
+			animation-play-state: paused;
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.strip-list {
+			flex: 1;
+			flex-wrap: wrap;
 			padding-block: 16px;
 		}
 
-		.strip span {
-			font-size: 12px;
-			gap: 12px;
+		.strip-list li {
+			white-space: normal;
 		}
 
-		.strip img {
+		.strip-list[aria-hidden='true'],
+		.strip-control {
+			display: none;
+		}
+	}
+
+	@media (max-width: 720px) {
+		.strip-list li {
+			font-size: 12px;
+		}
+
+		.strip-list img {
 			width: 16px;
 			height: 16px;
 		}
+	}
+}
+
+@keyframes specialty-scroll {
+	to {
+		transform: translateX(-100%);
 	}
 }
