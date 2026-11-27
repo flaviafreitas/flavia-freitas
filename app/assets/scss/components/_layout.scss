@@ -18,12 +18,6 @@
 		cursor: pointer;
 	}
 
-	a:where(:not(.btn)):hover,
-	button:where(:not(.btn)):hover {
-		text-decoration: underline;
-		text-underline-offset: 0.24em;
-	}
-
 	:focus-visible {
 		outline: 3px solid var(--color-focus);
 		outline-offset: 3px;
