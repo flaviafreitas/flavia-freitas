@@ -1,0 +1,121 @@
+.portfolio {
+	.navigation nav a,
+	.brand,
+	footer .actions a,
+	.project-link {
+		&:is(:hover, :focus-visible) {
+			color: var(--color-lime);
+		}
+	}
+
+	.email:is(:hover, :focus-visible) {
+		color: var(--color-forest);
+	}
+
+	.round:is(:hover, :focus-visible) {
+		background: var(--color-forest);
+	}
+
+	.strip-control {
+		border-radius: 50%;
+
+		&:is(:hover, :focus-visible) {
+			background: color-mix(in srgb, var(--color-ink) 12%, transparent);
+		}
+	}
+
+	:is(.navigation, footer, .projects, .contact, .strip) :is(a, button):focus-visible {
+		outline: 2px solid var(--color-focus);
+		outline-offset: 4px;
+	}
+
+	:is(.contact, .strip) :is(a, button):focus-visible {
+		outline-color: var(--color-ink);
+	}
+}
+
+@media (hover: hover) {
+	.portfolio {
+		.services article:hover {
+			box-shadow: inset 0 0 0 2px var(--color-ink);
+		}
+
+		.steps article:hover {
+			border-top-color: var(--color-lime);
+		}
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.portfolio {
+		.navigation nav a,
+		.brand,
+		footer .actions a,
+		.project-link {
+			transition: color var(--duration-fast) ease;
+		}
+
+		.round,
+		.strip-control {
+			transition: background-color var(--duration-fast) ease;
+		}
+
+		.services article {
+			transition:
+				translate var(--duration-medium) var(--ease-soft),
+				box-shadow var(--duration-fast) ease;
+		}
+
+		.steps article {
+			transition: border-color var(--duration-fast) ease;
+		}
+	}
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+	.portfolio .services article:hover {
+		translate: 0 -5px;
+	}
+}
+
+.portfolio {
+	.ui-arrow {
+		flex: none;
+		vertical-align: -0.18em;
+	}
+
+	.btn {
+		gap: 14px;
+		padding-inline: var(--space-6);
+		border-width: 1px;
+	}
+
+	.btn--secondary:not(:disabled, [aria-disabled='true']) {
+		background: var(--color-panel);
+		border-color: var(--color-line);
+		color: var(--color-cream);
+
+		&:is(:hover, :focus-visible) {
+			border-color: var(--color-lime);
+			color: var(--color-lime);
+		}
+	}
+
+	footer .actions {
+		gap: 8px 20px;
+	}
+
+	footer .actions a {
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+		min-height: 44px;
+		font-size: var(--text-small);
+		font-weight: 700;
+	}
+
+	footer .ui-arrow {
+		width: 15px;
+		height: 15px;
+	}
+}
