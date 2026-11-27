@@ -32,16 +32,14 @@
 		<div class="actions">
 			<UiButton href="#projetos">
 				Explore meus projetos
-				<img
-					:src="imageUrl('arrow-dark.svg')"
-					alt=""
-				/>
+				<UiArrow />
 			</UiButton>
 			<UiButton
 				variant="secondary"
 				href="#sobre"
 			>
-				Sobre mim ↓
+				Sobre mim
+				<UiArrow />
 			</UiButton>
 		</div>
 	</section>
