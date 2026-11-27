@@ -55,3 +55,65 @@
 		}
 	}
 }
+
+@media (prefers-reduced-motion: no-preference) {
+	.portfolio .hero {
+		.label,
+		h1,
+		.interfaces,
+		.intro,
+		.actions {
+			animation: hero-enter 550ms ease-out both;
+		}
+
+		h1 {
+			animation-delay: 70ms;
+		}
+
+		.interfaces {
+			animation-delay: 140ms;
+		}
+
+		.intro {
+			animation-delay: 210ms;
+		}
+
+		.actions {
+			animation-delay: 280ms;
+		}
+	}
+}
+
+@keyframes hero-enter {
+	from {
+		opacity: 0;
+		transform: translateY(12px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	html:has(.portfolio) {
+		scroll-behavior: smooth;
+	}
+
+	.portfolio .section-entered:not(:focus-within) {
+		animation: section-enter var(--duration-medium) var(--ease-soft);
+	}
+}
+
+@keyframes section-enter {
+	from {
+		opacity: 0.75;
+		transform: translateY(10px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
