@@ -1,7 +1,3 @@
-<script setup lang="ts">
-	const imageUrl = useAssetUrl()
-</script>
-
 <template>
 	<a
 		class="skip"
@@ -23,10 +19,7 @@
 			href="#contato"
 		>
 			Vamos conversar
-			<img
-				:src="imageUrl('arrow-light.svg')"
-				alt=""
-			/>
+			<UiArrow />
 		</UiButton>
 	</header>
 </template>
