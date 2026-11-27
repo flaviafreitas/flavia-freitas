@@ -35,3 +35,5 @@ Use um tab por nível, com largura visual de quatro espaços. Rode `npm run form
 ## Verificação e produção
 
 `npm run typecheck` verifica os tipos. `npm run build` gera o servidor para executar com `npm start`. Na hospedagem com servidor, a página consulta a versão publicada no Sanity. Para hospedagem estática, use `npm run generate`, configure o fallback das rotas do Studio e gere o site novamente depois de publicar alterações.
+
+Defina `NUXT_PUBLIC_SITE_URL` com a origem HTTPS pública antes do build de produção para gerar a URL canônica, a imagem de compartilhamento e o sitemap. Em hospedagem estática, configure também o cabeçalho `X-Robots-Tag: noindex, nofollow` para `/studio` e suas subrotas.
