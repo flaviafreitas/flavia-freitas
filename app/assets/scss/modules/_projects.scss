@@ -124,3 +124,42 @@
 		}
 	}
 }
+
+.portfolio .project-media {
+	overflow: hidden;
+	border-radius: 16px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.portfolio .projects {
+		.project-media .cover {
+			transition: transform 650ms cubic-bezier(0.22, 1, 0.36, 1);
+		}
+
+		.project-link .ui-arrow {
+			transition: transform 250ms ease-out;
+		}
+
+		article:focus-within {
+			.project-media .cover {
+				transform: scale(1.045);
+			}
+
+			.project-link .ui-arrow {
+				transform: translateX(4px);
+			}
+		}
+	}
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+	.portfolio .projects article:hover {
+		.project-media .cover {
+			transform: scale(1.045);
+		}
+
+		.project-link .ui-arrow {
+			transform: translateX(4px);
+		}
+	}
+}
