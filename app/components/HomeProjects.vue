@@ -45,10 +45,7 @@
 						:href="project.link"
 					>
 						Ver projeto
-						<img
-							:src="imageUrl('arrow-project.svg')"
-							alt=""
-						/>
+						<UiArrow direction="up-right" />
 					</a>
 					<button
 						v-else
@@ -56,19 +53,20 @@
 						@click="openProject(project)"
 					>
 						Explorar conceito
-						<img
-							:src="imageUrl(i === 0 ? 'arrow-project.svg' : 'arrow-card.svg')"
-							alt=""
-						/>
+						<UiArrow />
 					</button>
 				</div>
-				<img
+				<div
 					v-if="projectCover(project)"
-					class="cover"
-					:src="projectCover(project)"
-					:alt="'Prévia de ' + project.name"
-					loading="lazy"
-				/>
+					class="project-media"
+				>
+					<img
+						class="cover"
+						:src="projectCover(project)"
+						:alt="'Prévia de ' + project.name"
+						loading="lazy"
+					/>
+				</div>
 			</article>
 		</div>
 		<dialog
