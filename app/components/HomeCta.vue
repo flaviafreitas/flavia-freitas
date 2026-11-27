@@ -3,7 +3,6 @@
 
 	defineProps<{ content: HomeSections['cta'] }>()
 
-	const imageUrl = useAssetUrl()
 	const { site } = useSiteContent()
 </script>
 
@@ -21,10 +20,7 @@
 					:href="'mailto:' + site.email"
 					aria-label="Conversar sobre um projeto"
 				>
-					<img
-						:src="imageUrl('arrow-contact.svg')"
-						alt=""
-					/>
+					<UiArrow direction="up-right" />
 				</a>
 			</div>
 			<p>{{ content.contactText }}</p>
@@ -33,10 +29,7 @@
 				:href="'mailto:' + site.email"
 			>
 				{{ site.email }}
-				<img
-					:src="imageUrl('arrow-email.svg')"
-					alt=""
-				/>
+				<UiArrow direction="up-right" />
 			</a>
 		</div>
 	</section>
